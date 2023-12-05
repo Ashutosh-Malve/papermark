@@ -4,7 +4,6 @@ import prisma from "@/lib/prisma";
 import { authOptions } from "../../../auth/[...nextauth]";
 import { CustomUser } from "@/lib/types";
 import { getExtension, log } from "@/lib/utils";
-import { identifyUser, trackAnalytics } from "@/lib/analytics";
 import { getTeamWithUsersAndDocument } from "@/lib/team/helper";
 import { errorhandler } from "@/lib/errorHandler";
 
@@ -112,20 +111,7 @@ export default async function handle(
         pathWithQuery = url.pathname + url.search;
       }
 
-      await identifyUser((session.user as CustomUser).id);
-      await trackAnalytics({
-        event: "Document Added",
-        documentId: document.id,
-        name: document.name,
-        fileSize: null,
-        path: pathWithQuery,
-      });
-      await trackAnalytics({
-        event: "Link Added",
-        linkId: document.links[0].id,
-        documentId: document.id,
-        customDomain: null,
-      });
+    
 
       // trigger document uploaded event to trigger convert-pdf-to-image job
    
