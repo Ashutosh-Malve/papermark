@@ -13,13 +13,13 @@ import ExpirationSection from "./expiration-section";
 import EmailProtectionSection from "./email-protection-section";
 import { useRouter } from "next/router";
 import { useDocumentLinks } from "@/lib/swr/use-document";
-import { useDomains } from "@/lib/swr/use-domains";
+
 import { mutate } from "swr";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
 import { Label } from "@/components/ui/label";
 import { cn } from "@/lib/utils";
-import { UpgradePlanModal } from "@/components/billing/upgrade-plan-modal";
+ 
 import Link from "next/link";
 import DomainSection from "./domain-section";
 import AllowDownloadSection from "./allow-download-section";
@@ -60,7 +60,7 @@ export default function LinkSheet({
   currentLink?: DEFAULT_LINK_TYPE;
 }) {
   const { links } = useDocumentLinks();
-  const { domains } = useDomains();
+ 
   const teamInfo = useTeam();
   const [data, setData] = useState<DEFAULT_LINK_TYPE>(DEFAULT_LINK_PROPS);
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -173,9 +173,7 @@ export default function LinkSheet({
                     </div>
                   </div>
 
-                  <div className="space-y-2">
-                    <DomainSection {...{ data, setData, domains }} />
-                  </div>
+                  
 
                   <div className="flex items-center relative">
                     <Separator className="bg-muted-foreground absolute" />
