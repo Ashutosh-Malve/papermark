@@ -1,18 +1,13 @@
 import { getExtension } from "@/lib/utils";
 import { useDocument } from "@/lib/swr/use-document";
-import ErrorPage from "next/error";
-import StatsCard from "@/components/documents/stats-card";
-import StatsChart from "@/components/documents/stats-chart";
+import ErrorPage from "next/error"; 
 import AppLayout from "@/components/layouts/app";
 import LinkSheet from "@/components/links/link-sheet";
-import Image from "next/image";
-import LinksTable from "@/components/links/links-table";
-import VisitorsTable from "@/components/visitors/visitors-table";
+import Image from "next/image"; 
 import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import LoadingSpinner from "@/components/ui/loading-spinner";
-
-import FileUp from "@/components/shared/icons/file-up";
+ 
 import { toast } from "sonner";
 import {
   DropdownMenu,
@@ -24,8 +19,6 @@ import {
 import { useRouter } from "next/router";
 import MoreVertical from "@/components/shared/icons/more-vertical";
 import { useTeam } from "@/context/team-context";
-import ProcessStatusBar from "@/components/documents/process-status-bar";
-
 export default function DocumentPage() {
   const { document: prismaDocument, primaryVersion, error } = useDocument();
   const router = useRouter();
