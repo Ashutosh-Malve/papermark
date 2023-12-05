@@ -181,7 +181,7 @@ export default async function handle(
         },
       });
 
-      return res.redirect("/documents");
+      return res.redirect("/home");
     } catch (error) {
       errorhandler(error, res);
     }

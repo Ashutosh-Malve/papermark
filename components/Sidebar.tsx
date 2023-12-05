@@ -40,7 +40,14 @@ export default function Sidebar() {
     //   disabled: true,
     // },
     {
-      name: "Documents",
+      name: "Home",
+      href: "/home",
+      icon: FolderIcon,
+      current: router.pathname.includes("home"),
+      disabled: false,
+    },
+    {
+      name: "Announcement",
       href: "/documents",
       icon: FolderIcon,
       current: router.pathname.includes("documents"),
@@ -51,7 +58,7 @@ export default function Sidebar() {
       href: "/analytics",
       icon: PieChartIcon,
       current: router.pathname.includes("analytics"),
-      disabled: true,
+      disabled: false,
     },
     {
       name: "Settings",

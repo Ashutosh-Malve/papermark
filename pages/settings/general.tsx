@@ -50,7 +50,7 @@ export default function General() {
             <h3 className="text-2xl text-foreground font-semibold tracking-tight">
               General
             </h3>
-            <p className="text-sm text-muted-foreground">Manage your team</p>
+            <p className="text-sm text-muted-foreground">Manage your Heartfulness Community  </p>
           </div>
         </div>
         <div className="space-y-8">

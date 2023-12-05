@@ -32,9 +32,9 @@ export default async function AppMiddleware(req: NextRequest) {
     ) {
       return NextResponse.redirect(new URL("/welcome", req.url));
 
-      // if the path is /login, redirect to "/documents"
+      // if the path is /login, redirect to "/home"
     } else if (path === "/login") {
-      return NextResponse.redirect(new URL("/documents", req.url));
+      return NextResponse.redirect(new URL("/home", req.url));
     }
   }
 }
