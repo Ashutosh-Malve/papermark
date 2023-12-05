@@ -24,7 +24,7 @@ export default function Announcement() {
           </div>
           <ul className="flex items-center justify-between gap-4">
             <AddAnnouncementModal>
-              <Button>Add New Announcement</Button>
+              <Button>Add New</Button>
             </AddAnnouncementModal>
           </ul>
         </div>

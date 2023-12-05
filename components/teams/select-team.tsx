@@ -30,7 +30,7 @@ const SelectTeam = ({ teams, currentTeam, isLoading }: TeamContextType) => {
     setSelectTeamOpen(false);
     localStorage.setItem("currentTeamId", team.id);
     userTeam?.setCurrentTeam(team);
-    router.push("/documents");
+    router.push("/home");
   };
 
   return (
