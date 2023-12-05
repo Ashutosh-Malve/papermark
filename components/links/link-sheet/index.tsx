@@ -21,7 +21,7 @@ import { Label } from "@/components/ui/label";
 import { cn } from "@/lib/utils";
  
 import Link from "next/link";
-import DomainSection from "./domain-section";
+ 
 import AllowDownloadSection from "./allow-download-section";
 import { useTeam } from "@/context/team-context";
 import AllowNotificationSection from "./allow-notification";

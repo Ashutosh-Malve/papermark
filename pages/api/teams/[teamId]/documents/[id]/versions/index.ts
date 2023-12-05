@@ -5,7 +5,7 @@ import { log } from "@/lib/utils";
 import { authOptions } from "@/pages/api/auth/[...nextauth]";
 import { CustomUser } from "@/lib/types";
 import { getTeamWithUsersAndDocument } from "@/lib/team/helper";
-import { client } from "@/trigger";
+ 
 
 export default async function handle(
   req: NextApiRequest,
@@ -81,10 +81,7 @@ export default async function handle(
       console.log("version", version);
 
       // trigger document uploaded event to trigger convert-pdf-to-image job
-      await client.sendEvent({
-        name: "document.uploaded",
-        payload: { documentVersionId: version.id, versionNumber: version.versionNumber, documentId: documentId },
-      });
+   
 
       res.status(200).json({ id: documentId });
     } catch (error) {

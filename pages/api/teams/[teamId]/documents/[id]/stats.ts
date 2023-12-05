@@ -2,7 +2,7 @@ import { NextApiRequest, NextApiResponse } from "next";
 import { getServerSession } from "next-auth/next";
 import prisma from "@/lib/prisma";
 import { authOptions } from "../../../../auth/[...nextauth]";
-import { getTotalAvgPageDuration } from "@/lib/tinybird";
+ 
 import { CustomUser } from "@/lib/types";
 import { getTeamWithUsersAndDocument } from "@/lib/team/helper";
 import { errorhandler } from "@/lib/errorHandler";
@@ -42,18 +42,11 @@ export default async function handle(
         where: { documentId: docId },
         _count: { id: true },
       });
+ 
 
-      const duration = await getTotalAvgPageDuration({
-        documentId: docId,
-        since: 0,
-      });
+     
 
-      const total_duration = duration.data.reduce(
-        (totalDuration, data) => totalDuration + data.avg_duration,
-        0
-      );
-
-      const stats = { views, groupedViews, duration, total_duration };
+      const stats = { views, groupedViews };
 
       return res.status(200).json(stats);
     } catch (error) {

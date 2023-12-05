@@ -22,7 +22,7 @@ import { useRouter } from "next/router";
 import { useTeam } from "@/context/team-context";
 import { useTeams } from "@/lib/swr/use-teams";
 import Link from "next/link";
-import { usePlan } from "@/lib/swr/use-billing";
+ 
 import { useInvitations } from "@/lib/swr/use-invitations";
 
 export default function Billing() {
@@ -33,7 +33,7 @@ export default function Billing() {
   const { data: session } = useSession();
   const { team, loading } = useGetTeam()!;
   const teamInfo = useTeam();
-  const { plan: userPlan } = usePlan();
+     
   const { teams } = useTeams();
 
   const { invitations } = useInvitations();
@@ -167,7 +167,7 @@ export default function Billing() {
                 Teammates that have access to this project.
               </p>
             </div>
-            {userPlan && userPlan.plan !== "free" ? (
+            {  isCurrentUserAdmin() ? (
               <AddTeamMembers
                 open={isTeamMemberInviteModalOpen}
                 setOpen={setTeamMemberInviteModalOpen}
@@ -175,9 +175,7 @@ export default function Billing() {
                 <Button>Invite</Button>
               </AddTeamMembers>
             ) : (
-              <Button>
-                <Link href="/settings/billing">Upgrade to invite members</Link>
-              </Button>
+            <div></div>
             )}
           </div>
         </div>
