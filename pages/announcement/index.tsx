@@ -1,13 +1,13 @@
 import useDocuments from "@/lib/swr/use-documents";
-import DocumentCard from "@/components/documents/document-card";
+import DocumentCard from "@/components/documents/announcement-card";
 import Skeleton from "@/components/Skeleton";
 import { PlusIcon } from "@heroicons/react/24/solid";
-import { AddDocumentModal } from "@/components/documents/add-document-modal";
+import { AddAnnouncementModal } from "@/components/documents/add-announcement-modal";
 import { Separator } from "@/components/ui/separator";
 import AppLayout from "@/components/layouts/app";
 import { Button } from "@/components/ui/button";
 
-export default function Documents() {
+export default function Announcement() {
   const { documents } = useDocuments();
 
   return (
@@ -16,16 +16,16 @@ export default function Documents() {
         <div className="flex items-center justify-between mb-4 md:mb-8 lg:mb-12">
           <div className="space-y-1">
             <h2 className="text-2xl text-foreground font-semibold tracking-tight">
-              Documents
+            Announcement
             </h2>
             <p className="text-sm text-muted-foreground">
-              Manage your documents
+              Manage your Announcement
             </p>
           </div>
           <ul className="flex items-center justify-between gap-4">
-            <AddDocumentModal>
-              <Button>Add New Document</Button>
-            </AddDocumentModal>
+            <AddAnnouncementModal>
+              <Button>Add New Announcement</Button>
+            </AddAnnouncementModal>
           </ul>
         </div>
 
@@ -76,20 +76,20 @@ export function EmptyDocuments() {
           d="M9 13h6m-3-3v6m-9 1V7a2 2 0 012-2h6l2 2h6a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z"
         />
       </svg>
-      <h3 className="mt-2 text-sm font-medium text-foreground">No documents</h3>
+      <h3 className="mt-2 text-sm font-medium text-foreground">No Announcement</h3>
       <p className="mt-1 text-sm text-muted-foreground">
-        Get started by uploading a new document.
+        Get started by uploading a new Announcement.
       </p>
       <div className="mt-6">
-        <AddDocumentModal>
+        <AddAnnouncementModal>
           <button
             type="button"
             className="inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-foreground bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
           >
             <PlusIcon className="-ml-1 mr-2 h-5 w-5" aria-hidden="true" />
-            New Document
+            New Announcement
           </button>
-        </AddDocumentModal>
+        </AddAnnouncementModal>
       </div>
     </div>
   );

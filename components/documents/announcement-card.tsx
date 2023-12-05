@@ -10,7 +10,7 @@ import Copy from "@/components/shared/icons/copy";
 import BarChart from "@/components/shared/icons/bar-chart";
 import Image from "next/image";
 
-export default function DocumentsCard({
+export default function AnnouncementCard({
   document,
 }: {
   document: DocumentWithLinksAndLinkCountAndViewCount;
@@ -37,7 +37,7 @@ export default function DocumentsCard({
         <div className="flex-col">
           <div className="flex items-center">
             <h2 className="min-w-0 text-sm font-semibold leading-6 text-foreground truncate max-w-[240px] sm:max-w-md">
-              <Link href={`/documents/${document.id}`}>
+              <Link href={`/announcement/${document.id}`}>
                 <span className="">{document.name}</span>
                 <span className="absolute inset-0" />
               </Link>
@@ -75,7 +75,7 @@ export default function DocumentsCard({
         onClick={(e) => {
           e.stopPropagation();
         }}
-        href={`/documents/${document.id}`}
+        href={`/announcement/${document.id}`}
         className="flex items-center z-10 space-x-1 rounded-md bg-gray-200 dark:bg-gray-700 px-2 py-0.5 transition-all duration-75 hover:scale-105 active:scale-100"
       >
         <BarChart className="h-4 w-4 text-muted-foreground" />

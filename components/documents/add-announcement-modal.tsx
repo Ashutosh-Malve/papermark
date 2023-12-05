@@ -20,7 +20,7 @@ import { useTeam } from "@/context/team-context";
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
-export function AddDocumentModal({
+export function AddAnnouncementModal({
   newVersion,
   children,
 }: {
@@ -89,6 +89,7 @@ export function AddDocumentModal({
             router.push("/documents/" + document.id);
             setUploading(false);
           }, 2000);
+
         } else {
           // track the event
           plausible("documentVersionUploaded");
@@ -192,10 +193,11 @@ export function AddDocumentModal({
               <div className="space-y-12">
                 <div className="pb-6">
                   <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
-                    <DocumentUpload
+                    {/* <DocumentUpload
                       currentFile={currentFile}
                       setCurrentFile={setCurrentFile}
-                    />
+                    /> */}
+                    <textarea> </textarea>
                   </div>
                 </div>
               </div>
