@@ -49,16 +49,9 @@ export default function Home() {
             />
           </div>
 
-          <Header />
-          <Logos />
-          <Decks />
-          <Section />
-          <Section3 />
-          <Testimonials />
-          <Section2 />
+      
         </div>
       </div>
-      <Footer />
-    </>
+     </>
   );
 }
