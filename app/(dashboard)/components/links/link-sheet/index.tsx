@@ -8,9 +8,6 @@ import {
 } from "@/components/ui/sheet";
 import { Separator } from "@/components/ui/separator";
 import { Dispatch, SetStateAction, useEffect, useState } from "react";
-import PasswordSection from "./password-section";
-import ExpirationSection from "./expiration-section";
-import EmailProtectionSection from "./email-protection-section";
 import { useRouter } from "next/router";
 import { useDocumentLinks } from "@/lib/swr/use-document";
 
@@ -20,9 +17,8 @@ import { toast } from "sonner";
 import { Label } from "@/components/ui/label";
 import { cn } from "@/lib/utils";
  
-import AllowDownloadSection from "./allow-download-section";
 import { useTeam } from "@/context/team-context";
-import AllowNotificationSection from "./allow-notification";
+
 
 export const DEFAULT_LINK_PROPS = {
   id: null,
@@ -182,13 +178,7 @@ export default function LinkSheet({
                     </div>
                   </div>
 
-                  <div>
-                    <EmailProtectionSection {...{ data, setData }} />
-                    <AllowDownloadSection {...{ data, setData }} />
-                    <PasswordSection {...{ data, setData }} />
-                    <ExpirationSection {...{ data, setData }} />
-                    <AllowNotificationSection {...{ data, setData }} />
-                  </div>
+              
                 </div>
               </div>
             </div>
