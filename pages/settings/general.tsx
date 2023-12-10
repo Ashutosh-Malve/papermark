@@ -58,7 +58,7 @@ export default function General() {
             <div className="flex flex-col">
               <h2 className="text-xl font-medium">Team Name</h2>
               <p className="text-sm text-secondary-foreground mt-3">
-                This is the name of your team on Papermark.
+                This is the name of your team on Heartfulness.
               </p>
               <Input
                 ref={teamNameInputRef}

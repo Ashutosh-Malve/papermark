@@ -72,10 +72,10 @@ const DocSendAlternatives = () => {
           <p>
             Disclaimer: Currently Jaski supports
             <a
-              href="http://papermark.io/login"
+              href="http://Heartfulness.io/login"
               className="text-blue-600 underline px-2"
             >
-              Papermark
+              Heartfulness
             </a>
             to build more better Docsend alternative
           </p>

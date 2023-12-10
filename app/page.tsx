@@ -9,21 +9,21 @@ export default function Home() {
       <Head>
         <meta
           name="description"
-          content="Papermark is an open-source document infrastructure for sharing and collaboration. Free alternative to Docsend with custom domain. Manage secure document sharing with real-time analytics."
+          content="Heartfulness ."
         />
         <meta
           property="og:title"
-          content="Papermark | The Open Source DocSend Alternative"
+          content="Heartfulness  "
         />
         <meta
           property="og:description"
-          content="Papermark is an open-source document infrastructure for sharing and collaboration. Manage secure document sharing with real-time analytics. It is a free alternative to DocSend."
+          content="Heartfulness  "
         />
         <meta
           property="og:image"
-          content="https://www.papermark.io/_static/meta-image.png"
+          content="https://www.Heartfulness.io/_static/meta-image.png"
         />
-        <meta property="og:url" content="https://www.papermark.io" />
+        <meta property="og:url" content="https://www.Heartfulness.io" />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <nav className=" fixed top-0 w-full z-50 backdrop-blur-md">

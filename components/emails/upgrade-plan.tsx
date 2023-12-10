@@ -29,17 +29,17 @@ const UpgradePlanEmail = ({ name }: UpgradePlanEmailProps) => {
         <Body className="bg-white my-auto mx-auto font-sans">
           <Container className="my-10 mx-auto p-5 w-[465px]">
             <Heading className="text-2xl font-normal text-center p-0 mt-4 mb-8 mx-0">
-              <span className="font-bold tracking-tighter">Papermark</span>
+              <span className="font-bold tracking-tighter">Heartfulness</span>
             </Heading>
             <Heading className="text-xl font-seminbold text-center p-0 mt-4 mb-8 mx-0">
-              Thanks for for upgrading to Papermark Pro!
+              Thanks for for upgrading to Heartfulness Pro!
             </Heading>
             <Text className="text-sm leading-6 text-black">
               Hey{name && ` ${name}`}!
             </Text>
             <Text className="text-sm">
-              My name is Marc, and I&apos;m the creator of Papermark. I wanted
-              to personally reach out to thank you for upgrading to Papermark
+              My name is Marc, and I&apos;m the creator of Heartfulness. I wanted
+              to personally reach out to thank you for upgrading to Heartfulness
               Pro!
             </Text>
             <Text className="text-sm leading-6 text-black">

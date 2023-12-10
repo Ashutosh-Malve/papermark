@@ -34,14 +34,14 @@ export default function Next() {
         Heartfulness
         </p>
         <h1 className="font-display max-w-md text-3xl font-semibold transition-colors sm:text-4xl">
-          Which document do you want to share today?
+        What do you want to share today?
         </h1>
       </motion.div>
       <motion.div
         variants={STAGGER_CHILD_VARIANTS}
         className="grid w-full grid-cols-1 divide-y divide-border text-foreground rounded-md border border-border md:grid-cols-2 md:divide-x"
       >
-        <button
+        {/* <button
           onClick={() =>
             router.push({
               pathname: "/welcome",
@@ -68,7 +68,7 @@ export default function Next() {
         >
           <DocumentIcon className="h-auto  pointer-events-none w-12 sm:w-12" />
           <p>Another document</p>
-        </button>
+        </button> */}
       </motion.div>
     </motion.div>
   );
